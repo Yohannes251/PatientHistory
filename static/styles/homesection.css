@@ -1,0 +1,44 @@
+.welcome {
+	position: absolute;
+	top: 200%;
+	width: 100%;
+	text-align: center;
+}
+.welcome .welcomeMessage h1 {
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	font-size: 2.5em;
+	margin:
+}
+
+.roles {
+	position: absolute;
+	width: 100%;
+	top: 435%;
+	font-size: 2em;
+	text-align: center;
+	font-family: Trebuchet MS, sans-serif;
+	color: white;
+}
+
+.roles a {
+	padding: 0.2em 0.2em 0.2em 0.2em;
+	margin-left: 3.5em;
+	margin-right: 3.5em;
+	border-radius: 15px;
+	background-color: #2a0254;
+	color: white;
+}
+
+@media only screen and (max-width: 800px) {
+        .welcomeMessage h1 {
+                font-size: 2em !important;
+        }
+	.roles {
+		font-size: 1.5em !important;
+	}
+	.roles a {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+}
+

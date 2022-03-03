@@ -1,0 +1,87 @@
+.welcome {
+	position: absolute;
+	top: 120%;
+	width: 100%;
+	text-align: center;
+}
+.welcome .welcomeMessage h1 {
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	font-size: 2.5em;
+	color: #63036e;
+}
+
+.forms {
+	position: absolute;
+	width: 100%;
+	top: 245%;
+	text-align: center;
+	font-family: Trebuchet MS, sans-serif;
+}
+
+.forms input, .getinfo input {
+	width: 15%;
+	padding: 0.2em 0.2em;
+	margin-top: 0.2em;
+	margin-bottom: 0.5em;
+	border: 2px solid green;
+	border-radius: 5px;
+	transition: width 0.4s ease-in-out;
+	font-size: 1em;
+}
+
+.forms button, .getinfo button {
+	background-color: #04AA6D;
+	border: 3px groove #e6a22e;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 2.5vmin;
+	color: white;
+}
+
+.information {
+	position: absolute;
+	top: 590%;
+	width: 100%;
+	text-align: center;
+}
+
+.information .info h1 {
+	font-family:  Comic Sans MS, Comic Sans, cursive;
+	font-size: 2.5em;
+	color: #63036e;
+}
+
+.getinfo {
+	position: absolute;
+	width: 100%;
+	top: 700%;
+	text-align: center;
+}
+
+.forms input:focus, .getinfo input:focus {
+  width: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+	.forms input, .getinfo input {
+		width: 25%;
+	}
+
+        .welcomeMessage h1, .info h1 {
+                font-size: 2.3em !important;
+        }
+}
+
+@media only screen and (max-width: 600px) {
+	.welcomeMessage h1, .info h1 {
+		font-size: 2em !important;
+	}
+	
+	.forms input, .getinfo input {
+		width: 30% !important;
+		font-size: 3vmin !important;
+	}
+	button {
+		font-size: 3.5vmin !important;
+	}
+}
