@@ -1,19 +1,19 @@
-.welcome {
-	position: absolute;
-	top: 200%;
+.welcomeMessage {
+	display: block;
 	width: 100%;
 	text-align: center;
+	margin-top: 3em;
 }
-.welcome .welcomeMessage h1 {
+.welcomeMessage h1 {
 	font-family: Comic Sans MS, Comic Sans, cursive;
 	font-size: 2.5em;
-	margin:
+	margin-bottom: 1em;
 }
 
 .roles {
-	position: absolute;
+	display: block;
 	width: 100%;
-	top: 435%;
+	margin-top: 5em;
 	font-size: 2em;
 	text-align: center;
 	font-family: Trebuchet MS, sans-serif;

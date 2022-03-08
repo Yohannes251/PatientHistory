@@ -7,21 +7,21 @@
  		<link rel="stylesheet" href="../static/styles/receptionsection.css">
 	</head>
 	<body>
-		<header>
-			<img src="../static/images/clinic.png" alt="Clinic Logo">
-			<h1>Patient History</h1>
-			<div class="nvg">
-                        	<a href="home.html">HOME</a>
-				<a href ="reception.html">RECEPTION</a>
-				<a href="doctor.html">DOCTOR</a>
-			</div>
-		</header>
-		<section class="welcome">
-			<div class="welcomeMessage">
-				<h1>New Patient Registration Form</h1>
-			</div>
-		</section>
-		<section class="forms">
+		<div class="header">
+			<header>
+				<img src="../static/images/clinic.png" alt="Clinic Logo">
+				<h1>Patient History</h1>
+				<div class="nvg">
+                        		<a href="home.html">HOME</a>
+					<a href ="reception.html">RECEPTION</a>
+					<a href="doctor.html">DOCTOR</a>
+				</div>
+			</header>
+		</div>
+		<div class="welcomeMessage">
+			<h1>New Patient Registration Form</h1>
+		</div>
+		<div class="forms">
 			<form>
 				<label for="name">Full Name:</label><br>
 				<input type="text" id="name" name="name" placeholder="Enter name..." required><br>
@@ -35,19 +35,17 @@
 				<input type="text" id="city" name="city" placeholder="Enter residence city..." required><br>
 				<br>
 				<button type="submit">Submit Form</button>
-			</form>
-			
-		</section>
-		<section class="information">
-                        <div class="info">
-                                <h1>Get Patient's Information</h1>
-                        </div>
-                </section>
-		<section class="getinfo">
+			</form>	
+		</div>
+		<div class="info">
+			<h1>Get Patient's Information</h1>
+		</div>
+		<div class="getInfo">
 			<input type="number" id="getinfo" placeholder="Enter phone number" required>
 			<br>
 			<br>
 			<button type="search">Search</button>
+		</div>
 
 	</body>
 </html>

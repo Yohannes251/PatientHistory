@@ -2,36 +2,44 @@ html, body {
 	min-width: 30;
 	width: auto;
 	width: 100%;
+	height: auto;
 }
 body {
-	position: fixed;
 	margin: 0 0 0 0;
 	background-color: #f6f7e6;
 }
 
 header {
-	background-color: #3260ab;
+	position: fixed;
 	height: 100px;
+	background-color: #3260ab;
+	width: 100%;
 }
-header img {
+.header header img {
 	position: absolute;
 	right: 0;
 	border-radius: 50%;
 	max-width: 25%;
-	height: 100%;
+	width: 100px;
+	height: 100px;
 	background-color: #ccabc0;
 }
-header h1 {
+.header header h1 {
 	position: absolute;
 	color: white;
 	width: 100%;
-	height: 100%;
 	font-family: "Copperplate Gothic Light", "Courier New", monospace;
 	text-align: center;
 	font-size: 4.7vmin;
-	margin: 20px 0 0 0;
+	margin: 30px 0 0 0;
 }
-header .nvg {
+
+.header {
+	background-color: #3260ab;
+	height: 100px;
+	position: relative;
+}
+.header header .nvg {
 	position: absolute;
 	min-width: 30%;
 	display: inline-block;
