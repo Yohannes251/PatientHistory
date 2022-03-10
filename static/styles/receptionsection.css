@@ -83,7 +83,7 @@
 
 @media only screen and (max-width: 800px) {
 	.forms input, .getInfo input {
-		width: 30%;
+		width: 40%;
 	}
 
         .welcomeMessage h1, .info h1 {
