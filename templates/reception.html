@@ -14,9 +14,9 @@
 				<img src="../static/images/clinic.png" alt="Clinic Logo">
 				<h1>Patient History</h1>
 				<div class="nvg">
-                        		<a href="home.html">HOME</a>
-					<a href ="reception.html">RECEPTION</a>
-					<a href="doctor.html">DOCTOR</a>
+                        		<a href="/home">HOME</a>
+					<a href ="/reception">RECEPTION</a>
+					<a href="/doctor">DOCTOR</a>
 				</div>
 			</header>
 		</div>
@@ -25,15 +25,15 @@
 			<h1>New Patient Registration Form</h1>
 		</div>
 		<div class="forms">
-			<form action="reception.html" method="post">
+			<form action="/reception" method="post">
 				<label for="name">Full Name:</label><br>
 				<input type="text" id="name" name="name" placeholder="Enter name..." required><br>
-				<label for="sex">Sex:</label><br>
-				<input type="text" id="sex" name="sex" placeholder="Enter gender..." required><br>
+				<label for="gender">Gender:</label><br>
+				<input type="text" id="gender" name="gender" placeholder="Enter gender..." required><br>
 				<label for="age">Age:</label><br>
                                 <input type="number" id="age" name="age" placeholder="Enter age..." required><br>
                                 <label for="phonenumber">Phone Number:</label><br>
-				<input type="number" id="phonenumber" name="phonenumber" placeholder="Enter phone number..." required><br>
+				<input type="text" id="phonenumber" name="phonenumber" placeholder="Enter phone number..." required><br>
 				<label for="city">City:</label><br>
 				<input type="text" id="city" name="city" placeholder="Enter residence city..." required><br>
 				<br>
@@ -44,7 +44,7 @@
 			<h1>Get Patient's Information</h1>
 		</div>
 		<div class="getInfo">
-			<form action="reception.html" method="GET">
+			<form action="/reception" method="GET">
 				<input type="number" name="getinfo" placeholder="Enter phone number" required>
 				<br>
 				<br>

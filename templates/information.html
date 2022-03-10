@@ -12,9 +12,9 @@
 				<img src="../static/images/clinic.png" alt="Clinic Logo">
 				<h1>Patient History</h1>
 				<div class="nvg">
-                        		<a href="home.html">HOME</a>
-					<a href ="reception.html">RECEPTION</a>
-					<a href="doctor.html">DOCTOR</a>
+                        		<a href="/home">HOME</a>
+					<a href ="/reception">RECEPTION</a>
+					<a href="/doctor">DOCTOR</a>
 				</div>
 			</header>
 		</div>
@@ -26,8 +26,9 @@
 				<thead>
 				<tr>
 					<td>Card No.</td>
+					<td>Reg. Date</td>
 					<td>Name</td>
-					<td>Sex</td>
+					<td>Gender</td>
 					<td>Age</td>
 					<td>Phone no.</td>
 					<td>City</td>
@@ -38,8 +39,9 @@
 
 				{% for da in data %}
 					<td>{{ da.id }}</td>
+					<td>{{ da.created_at }}</td>
 					<td>{{ da.name }}</td>
-					<td>{{ da.sex }}</td>
+					<td>{{ da.gender }}</td>
 					<td>{{ da.age }}</td>
 					<td>{{ da.phonenumber }}</td>
 					<td>{{ da.city }}</td>
