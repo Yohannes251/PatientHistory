@@ -5,6 +5,8 @@
 		<title>Patient History</title>
 		<link rel="stylesheet" href="../static/styles/header.css">
  		<link rel="stylesheet" href="../static/styles/receptionsection.css">
+		<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../static/scripts/reception.js"></script>-->
 	</head>
 	<body>
 		<div class="header">
@@ -23,7 +25,7 @@
 			<h1>New Patient Registration Form</h1>
 		</div>
 		<div class="forms">
-			<form>
+			<form action="reception.html" method="post">
 				<label for="name">Full Name:</label><br>
 				<input type="text" id="name" name="name" placeholder="Enter name..." required><br>
 				<label for="sex">Sex:</label><br>
@@ -42,8 +44,8 @@
 			<h1>Get Patient's Information</h1>
 		</div>
 		<div class="getInfo">
-			<form>
-				<input type="number" id="getinfo" placeholder="Enter phone number" required>
+			<form action="reception.html" method="GET">
+				<input type="number" name="getinfo" placeholder="Enter phone number" required>
 				<br>
 				<br>
 				<button type="submit" formmethod="get">Get Info</button>

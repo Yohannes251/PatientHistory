@@ -46,7 +46,7 @@ header {
 	display: inline-block;
 	top: 65px;
 	left: 10px;
-	font-family: Blippo, fantasy;
+	font-family: "Copperplate Gothic Light", "Courier New", monospace;
 	color: white;
 }
 header .nvg a {
@@ -69,9 +69,13 @@ header .nvg a {
 
 }
 
-/*@media only screen and (max-width: 600px) {
-        .welcomeMessage h1, .info h1 {
-                font-size: 1em !important;
+@media only screen and (max-width: 400px) {
+        .header header .nvg {
+                top: 70px;
         }
+        header .nvg a {
+                font-size: 0.8em !important;
+        }
+
 }
-*/
+

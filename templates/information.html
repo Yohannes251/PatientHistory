@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Patient History</title>
+		<link rel="stylesheet" href="../static/styles/header.css">
+ 		<link rel="stylesheet" href="../static/styles/infosection.css">
+	</head>
+	<body>
+		<div class="header">
+			<header>
+				<img src="../static/images/clinic.png" alt="Clinic Logo">
+				<h1>Patient History</h1>
+				<div class="nvg">
+                        		<a href="home.html">HOME</a>
+					<a href ="reception.html">RECEPTION</a>
+					<a href="doctor.html">DOCTOR</a>
+				</div>
+			</header>
+		</div>
+		<div class="welcomeMessage">
+			<h1>Patient Information</h1>
+		</div>
+		<div class="table">
+			<table class="basicinfo">
+				<thead>
+				<tr>
+					<td>Card No.</td>
+					<td>Name</td>
+					<td>Sex</td>
+					<td>Age</td>
+					<td>Phone no.</td>
+					<td>City</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+
+				{% for da in data %}
+					<td>{{ da.id }}</td>
+					<td>{{ da.name }}</td>
+					<td>{{ da.sex }}</td>
+					<td>{{ da.age }}</td>
+					<td>{{ da.phonenumber }}</td>
+					<td>{{ da.city }}</td>
+				{% endfor %}
+				</tr>
+				</tbody>
+		</div>
+		<!--<div class="roles">
+			<a href="/reception">Receptionist</a>
+			<a href="/doctor">Doctor</a>
+		</div>-->
+	</body>
+</html>

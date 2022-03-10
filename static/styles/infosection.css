@@ -1,0 +1,72 @@
+.background {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 80%;
+        background-image: url("../images/hospital.png");
+	background-width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+        opacity: 0.6;
+        z-index: -1;
+}
+
+.welcomeMessage {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 3em;
+}
+.welcomeMessage h1 {
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	font-size: 2.5em;
+	margin-bottom: 1em;
+}
+
+.table {
+	text-align: center;
+}
+
+.table .basicinfo {
+	border-collapse: collapse;
+	width: 30em;
+	background-color: #78e3dc;
+	border-radius: 5px;
+}
+
+.table .basicinfo thead tr {
+	border-bottom: 3px dashed black;
+}
+
+.table .basicinfo thead tr td {
+	font-weight: bold;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	padding: 8px;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+	background-color: blue;
+}
+
+.table .basicinfo tbody tr td {
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        padding: 8px;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+}
+
+@media only screen and (max-width: 800px) {
+        .welcomeMessage h1 {
+                font-size: 2em !important;
+        }
+	.roles {
+		font-size: 1.5em !important;
+	}
+	.roles a {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+}
+
