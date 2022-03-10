@@ -1,3 +1,17 @@
+.background {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 80%;
+        background-image: url("../images/hospital.png");
+	background-width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+        opacity: 0.6;
+        z-index: -1;
+}
+
 .welcomeMessage {
 	display: block;
 	width: 100%;
