@@ -1,5 +1,5 @@
-from models import patient
-from flask import Flask, render_template, request
+from models import patient, records
+from flask import Flask, render_template, request, flash
 from sqlalchemy.orm import sessionmaker
 
 Session = sessionmaker(bind=patient.engine)
@@ -30,11 +30,33 @@ def reception():
         new_patient = patient.Patient(name, gender, age, phonenumber, city)
         session.add(new_patient)
         session.commit()
+
         return render_template('reception.html')
 
-@app.route('/doctor')
+@app.route('/doctor', methods=['GET', 'POST'])
 def doctor():
-    return render_template('doctor.html')
+    if request.method == 'GET':
+        if ('getinfo' in request.args.keys()):
+            cardno = request.args['getinfo']
+            info = session.query(patient.Patient).filter(patient.Patient.id == cardno)
+            data = session.query(records.Records).filter(records.Records.cardno == cardno)
+            return render_template('records.html', data=data, info=info)
+        else:
+            return render_template('doctor.html')
+    elif request.method =='POST':
+        cardno = request.form['cardno']
+        doctorname = request.form['doctorname']
+        labtests = request.form['labtests']
+        labresults = request.form['labresults']
+        diagnosis = request.form['diagnosis']
+        treatment = request.form['treatment']
+        prescription = request.form['prescription']
+        critical = request.form['critical']
+        new_record = records.Records(cardno, doctorname, labtests, labresults, diagnosis, treatment, prescription, critical)
+        session.add(new_record)
+        session.commit()
+
+        return render_template('doctor.html')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
