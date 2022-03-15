@@ -1,10 +1,8 @@
 .background {
         position: absolute;
-        top: 100px;
-        width: 100%;
-        height: 80%;
-        background-image: url("../images/hospital.png");
-	background-width: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../images/home.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-size: 100% 100%;
@@ -43,7 +41,7 @@
 	color: white;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 780px) {
         .welcomeMessage h1 {
                 font-size: 2em !important;
         }
@@ -53,6 +51,20 @@
 	.roles a {
 		margin-left: 2em;
 		margin-right: 2em;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.background {
+		background-size: auto !important;
+	}
+	.roles {
+		font-size: 1.5em !important;
+	}
+	.roles a {
+		padding: 0;
+		margin-left: 1em !important;
+		margin-right: 1em !important;
+		border-radius: 8px;
 	}
 }
 

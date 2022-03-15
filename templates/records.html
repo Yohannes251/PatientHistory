@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Patient History</title>
+		<link rel="stylesheet" href="../static/styles/header.css">
+ 		<link rel="stylesheet" href="../static/styles/recordsection.css">
+	</head>
+	<body>
+		<div class="header">
+			<header>
+				<img src="../static/images/clinic.png" alt="Clinic Logo">
+				<h1>Patient History</h1>
+				<div class="nvg">
+                        		<a href="/home">HOME</a>
+					<a href ="/reception">RECEPTION</a>
+					<a href="/doctor">DOCTOR</a>
+				</div>
+			</header>
+		</div>
+		<div class="welcomeMessage">
+			<h1>Patient's name: <em style="Color: maroon;">{{ info[0].name }}</em>   |   Card Number: <em style="Color: maroon;">{{ info[0].id }}</em></h1>
+		</div>
+		<div class="table">
+			{% for da in data %}
+			<table class="basicinfo">
+				<tr>
+					<th colspan="2">Appointment Date : {{ da.created_at }}</th>
+				</tr>
+				<tr>
+					<th>Doctor</th>
+					<td>{{ da.doctorname }}</td>
+				<tr>
+					<th>Lab tests</th>
+					<td>{{ da.labtests }}</td>
+				</tr>
+				<tr>
+					<th>Lab Results</th>
+					<td>{{ da.labresults }}</td>
+				</tr>
+				<tr>
+					<th>Diagnosis</th>
+					<td>{{ da.diagnosis }}</td>
+				</tr>
+				<tr>
+					<th>Treatment</th>
+					<td>{{ da.treatment }}</td>
+				</tr>
+				<tr>
+					<th>Prescription</th>
+					<td>{{ da.prescription }}</td>
+				</tr>
+				<tr>
+					<th>Critical</th>
+					<td>{{ da.critical }}</td>
+				</tr>
+			</table>
+			{% endfor %}
+		</div>
+		<!--<div class="roles">
+			<a href="/reception">Receptionist</a>
+			<a href="/doctor">Doctor</a>
+		</div>-->
+	</body>
+</html>
