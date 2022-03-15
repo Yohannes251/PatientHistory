@@ -22,7 +22,9 @@
 			<h1>Appointment Session Information Form</h1>
 		</div>
 		<div class="forms">
-			<form action="#" method="POST">
+			<form action="/doctor" method="POST">
+				<label for="cardno">Patient's card no.:</label><br>
+				<input type="number" name="cardno" placeholder="Enter card no...." required><br>
 				<label for="doctorname">Dotors Name:</label><br>
 				<input type="text" id="name" name="doctorname" placeholder="Enter name..." required><br>
 				<label for="labtests">Laboratory tests:</label><br>
@@ -35,6 +37,8 @@
 				<input type="text" name="treatment" placeholder="Enter info..." required><br>
 				<label for="prescription">Prescription:</label><br>
                                 <input type="text" name="prescription" placeholder="Enter info..." required><br>
+				<label for="critical">Critical score:</label><br>
+				<input type="number" name="critical" placeholder="Enter score..." required><br>
 				<br>
 				<button type="submit" formmethod="post">Submit Form</button>
 			</form>	
@@ -44,7 +48,7 @@
 		</div>
 		<div class="getInfo">
                         <form action="/doctor" method="GET">
-                                <input type="number" name="getinfo" placeholder="Enter phone number" required>
+                                <input type="number" name="getinfo" placeholder="Enter card number" required>
                                 <br>
                                 <br>
                                 <button type="submit" formmethod="get">Get Info</button>
