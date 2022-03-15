@@ -1,12 +1,7 @@
 from sqlalchemy import create_engine, Column, String, Integer, DateTime, Sequence
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from datetime import datetime
+from models import engine, Base
 
-#Please populate your username, password and database_name
-engine = create_engine('mysql://<username>:<password>@localhost/<database>', echo=True)
-
-Base = declarative_base()
 
 class Patient(Base):
     __tablename__ = 'patient'
