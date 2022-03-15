@@ -1,15 +1,31 @@
-import sqlalchemy
-from sqlalchemy import create_engine
-from sqlalchemy.orm import scoped_session
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine, Column, String, Integer, DateTime, Sequence
 from datetime import datetime
-import models
+from models import engine, Base
 
-class records(patient):
-    def __init__(self):
-        self.doctor_name = Column(String(128), nullable=False)
-        self.lab_tests = Column(String(128), nullable=False)
-        self.lab_results = Column(String(128), nullable=False)
-        self.diagnosis = Column(String(128), nullable=False)
-        self.treatment = Column(String(128), nullable=False)
-        self.prescription = Column(String(128), nullable=False)
+
+class Records(Base):
+    __tablename__ = 'records'
+
+    rid = Column(Integer, primary_key=True)
+    created_at = Column(DateTime)
+    cardno = Column(Integer) 
+    doctorname = Column(String(128), nullable=False)
+    labtests = Column(String(500), nullable=False)
+    labresults = Column(String(500), nullable=False)
+    diagnosis = Column(String(500), nullable=False)
+    treatment = Column(String(500), nullable=False)
+    prescription = Column(String(500), nullable=False)
+    critical = Column(Integer)
+
+    def __init__(self, cardno, doctorname, labtests, labresults, diagnosis, treatment, prescription, critical):
+        self.created_at = datetime.today()
+        self.cardno = cardno
+        self.doctorname = doctorname
+        self.labtests = labtests
+        self.labresults = labresults
+        self.diagnosis = diagnosis
+        self.treatment = treatment
+        self.prescription = prescription
+        self.critical = critical
+
+Base.metadata.create_all(engine)
