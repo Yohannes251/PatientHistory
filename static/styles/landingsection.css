@@ -1,0 +1,155 @@
+body {
+	display: flex;
+	flex-direction: column;
+}
+.background {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../images/home.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+        opacity: 0.6;
+        z-index: -1;
+}
+
+.welcomeMessage {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 10em;
+}
+.welcomeMessage h1 {
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	font-size: 2.5em;
+	margin-bottom: 1em;
+}
+
+.feature {
+	margin-top: 300px;
+	background-color: #f8f8ff;
+}
+
+.feature .title {
+	text-align: center;
+	color: blue;
+}
+
+.registration, .records {
+        display: inline-block;
+        width: 100%;
+	height: 400px;
+}
+
+.descreption1 {
+	float: left;
+	text-align: center;
+	width: 50%;
+	height: 400px;
+}
+
+.inside {
+	margin-top: 70px;;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.visual1 {
+	float: left;
+	text-align: center;
+	width: 50%;
+	height: 400px;
+}
+
+.visual1 img {
+	width: 400px;
+	height: 300px;
+}
+
+.about {
+	width: 100%;
+}
+
+.about .inspiration {
+	width: 75%;
+	color: #800080;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.3em;
+	padding: 8px;
+	border: 4px solid black;
+	border-radius: 10px;
+	margin-bottom: 100px;
+}
+
+.about .team {
+	width: 100%;
+	padding: 5px 0 0.5px 0;
+	background-color: #f0ffff;
+}
+
+.about .team p {
+	font-size: 1.5em;
+	text-align: center;
+}
+.about .team .members {
+	display: flex;
+	flex-direction: row;
+	gap: 5vw;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+
+.about .team .members .member {
+	width: 300px;
+	text-align: center;
+}
+
+.about .team .members .links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+}
+
+.repo {
+	text-align: center;
+	color: red;
+	padding: 20px;
+}
+.repo a {
+	font-size: 1.5em;
+	color: red;
+}
+
+
+@media only screen and (max-width: 780px) {
+        .welcomeMessage h1 {
+                font-size: 2em !important;
+        }
+	.roles {
+		font-size: 1.5em !important;
+	}
+	.roles a {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.background {
+		background-size: auto !important;
+	}
+	.roles {
+		font-size: 1.5em !important;
+	}
+	.roles a {
+		padding: 0;
+		margin-left: 1em !important;
+		margin-right: 1em !important;
+		border-radius: 8px;
+	}
+}
+
